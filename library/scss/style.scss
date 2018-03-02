@@ -150,36 +150,6 @@ Navigation Menu
 This is the css for the mobile navigation
 **********************/
 
-//base styles
-
-.main-navigation {
-	text-align: right;
-}
-.main-navigation a {
-	text-decoration: none;
-	margin: 0 5px;
-	padding: 0 auto;
-	font-size: 1.250rem;
-}
-.main-navigation li {
-	line-height: 1.42857143;
-}
-.main-navigation a:hover,
-.main-navigation a:focus {
-	color: #21759b;
-}
-.main-navigation a:visited {
-	color: #c0c6f2;
-}
-.main-navigation ul.nav,
-.main-navigation div.nav > ul {
-	display: none;
-}
-
-.main-navigation ul.nav.toggled-on,
-.menu-toggle {
-	display: inline-block;
-}
 
 // home page styles
 
@@ -191,135 +161,12 @@ This is the css for the mobile navigation
 	text-decoration: none;
 	font-size: 1.250rem;
 }
-.home .main-navigation li a:hover,
-.home .main-navigation li a:focus,
-.home .main-navigation li a:active,
-.home .main-navigation li a:visited {
-	color: #c0c6f2;
+.home .main-navigation li a:hover {
+	color: $banana; 
 }
 
-@media screen and (max-width: 599px) {
-	.main-navigation .menu-main-container {
-		background: black;
-		opacity: 0.5;
-		padding: 0.625rem;
-	}
-	.menu-toggle {
-		background: transparent;
-		border: none;
-		color: white;
-		font-size: 1.125rem;
-		margin-top: 0.625rem;
-	}
-	nav .toggled-on li {
-        padding-bottom: 0.625rem;
-	}
-	.box-shadow-menu {
-		position: relative;
-		padding-left: 1.25em;
-	  }
-	  .box-shadow-menu:before {
-		content: "";
-		position: absolute;
-		left: 0;
-		top: 0.25em;
-		width: 1em;
-		height: 0.15em;
-		background: white;
-		box-shadow:  0 0.25em 0 0 white, 0 0.5em 0 0 white;
-	  }
-}
 
-// 600px and up
 
-@media screen and (min-width: 600px) {
 
-.main-navigation {float: right;}
-.main-navigation ul.nav,
-	.main-navigation div.nav > ul {
-			//border-bottom: 1px solid #ededed;
-			//border-top: 1px solid #ededed;
-			display: inline-block !important;
-			width: 100%;
-	}
-	.main-navigation ul {
-			margin: 0;
-			text-indent: 0;
-	}
-	.main-navigation li a,
-	.main-navigation li {
-			display: inline-block;
-			text-decoration: none;
-	}
-	.main-navigation li a {
-			border-bottom: 0;
-			color: #6a6a6a;
-			line-height: 3.692307692;
-			text-transform: uppercase;
-			white-space: nowrap;
-	}
-	.main-navigation li a:hover,
-	.main-navigation li a:focus {
-			color: #000;
-	}
-	.main-navigation li {
-			margin: 0 40px 0 0;
-			margin: 0 2.857142857rem 0 0;
-			position: relative;
-	}
-	.main-navigation li ul {
-			margin: 0;
-			padding: 0;
-			position: absolute;
-			top: 100%;
-			z-index: 1;
-			height: 1px;
-			width: 1px;
-			overflow: hidden;
-			clip: rect(1px, 1px, 1px, 1px);
-	}
-	.main-navigation li ul ul {
-			top: 0;
-			left: 100%;
-	}
-	.main-navigation ul li:hover > ul,
-	.main-navigation ul li:focus > ul,
-	.main-navigation .focus > ul {
-			border-left: 0;
-			clip: inherit;
-			overflow: inherit;
-			height: inherit;
-			width: inherit;
-	}
-	.main-navigation li ul li a {
-			background: #efefef;
-			border-bottom: 1px solid #ededed;
-			display: block;
-			font-size: 11px;
-			font-size: 0.785714286rem;
-			line-height: 2.181818182;
-			padding: 8px 10px;
-			padding: 0.571428571rem 0.714285714rem;
-			width: 180px;
-			width: 12.85714286rem;
-			white-space: normal;
-	}
-	.main-navigation li ul li a:hover,
-	.main-navigation li ul li a:focus {
-			background: #e3e3e3;
-			color: #444;
-	}
-	.main-navigation .current-menu-item > a,
-	.main-navigation .current-menu-ancestor > a,
-	.main-navigation .current_page_item > a,
-	.main-navigation .current_page_ancestor > a {
-			color: #636363;
-			font-weight: bold;
-	}
-	.menu-toggle {
-			display: none;
-	}
 
-	}
-///////////////////////////////////////////////////////
 	

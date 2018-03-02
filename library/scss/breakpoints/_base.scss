@@ -19,10 +19,15 @@ body {
 	font-family: $lato;
 	font-size: 100%;
 	line-height: 1.5;
-	color: $text-color;
-	background-color: $gray;
+	color: $black;
+	background-color: $light-blue;
   	-webkit-font-smoothing: antialiased;
   	-moz-osx-font-smoothing: grayscale;
+}
+
+#content {
+	background: $light-blue;
+	margin-bottom: 1.5em;
 }
 
 /********************
@@ -170,11 +175,70 @@ HEADER STYLES
 		}
 	}
 
+
 /*********************
 NAVIGATION STYLES
-********************
+**********************/
+.main-navigation {
+	text-align: right;
+}
+.main-navigation a {
+	text-decoration: none;
+	margin: 0 5px;
+	padding: 0 auto;
+	font-size: 1.250rem;
+	font-weight: bolder;
+}
+.main-navigation li {
+	line-height: 1.42857143;
+}
+.main-navigation a:hover {
+	color: $banana;
+}
 
+.main-navigation ul.nav,
+.main-navigation div.nav > ul {
+	display: none;
+}
 
+.main-navigation ul.nav.toggled-on,
+.menu-toggle {
+	display: inline-block;
+}
+
+@media screen and (max-width: 767px) {
+	.main-navigation .menu-main-container {
+		background: $black;
+		opacity: 0.7;
+		padding: 0 0.625rem;
+	}
+	.menu-toggle {
+		background: transparent;
+		border: none;
+		color: $white;
+		font-size: 1.125rem;
+		margin-top: 0.625rem;
+	}
+	nav .toggled-on li {
+        padding-bottom: 0.625rem;
+	}
+	.box-shadow-menu {
+		position: relative;
+		padding-left: 1.25em;
+	  }
+	  .box-shadow-menu:before {
+		content: "";
+		position: absolute;
+		left: 0;
+		top: 0.25em;
+		width: 1em;
+		height: 0.15em;
+		background: $white;
+		box-shadow:  0 0.25em 0 0 $white, 0 0.5em 0 0 $white;
+	  }
+}
+
+/*
 //all navs have a .nav class applied via
 //the wp_menu function; this is so we can
 //easily write one group of styles for
@@ -253,6 +317,16 @@ and more scalable.
 
 } // end .nav 
 */
+
+/********************
+Pages
+*********************/
+
+#inner-content {
+	background: $gray;
+	padding: 25px;
+	box-shadow: 0 10px 25px 0;
+}
 
 /*********************
 POSTS & CONTENT STYLES
