@@ -25,10 +25,6 @@ body {
   	-moz-osx-font-smoothing: grayscale;
 }
 
-#content {
-	background: $light-blue;
-	margin-bottom: 1.5em;
-}
 
 /********************
 WORDPRESS BODY CLASSES
@@ -161,6 +157,7 @@ HEADER STYLES
 	background-image: url("http://localhost:8888/kayak/wp-content/uploads/2018/02/pexels-photo-696039.jpeg");
 	background-size: cover;
 	height: 500px;
+	border: $navy solid 2px;
 		@media all and (min-width: 1240px) { 
 			height: 600px; }
 }
@@ -333,7 +330,9 @@ POSTS & CONTENT STYLES
 *********************/
 
 #content {
-	margin-top: 1.5em;
+	margin-top: 3rem;
+	margin-bottom: 3rem;
+	background: $light-blue;
 }
 
 		.hentry {

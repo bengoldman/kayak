@@ -1257,10 +1257,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
-#content {
-  background: #036e86;
-  margin-bottom: 1.5em; }
-
 /********************
 WORDPRESS BODY CLASSES
 style a page via class
@@ -1367,7 +1363,8 @@ HEADER STYLES
 .home .header {
   background-image: url("http://localhost:8888/kayak/wp-content/uploads/2018/02/pexels-photo-696039.jpeg");
   background-size: cover;
-  height: 500px; }
+  height: 500px;
+  border: #092140 solid 2px; }
   @media all and (min-width: 1240px) {
     .home .header {
       height: 600px; } }
@@ -1526,7 +1523,9 @@ Pages
 POSTS & CONTENT STYLES
 *********************/
 #content {
-  margin-top: 1.5em; }
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  background: #036e86; }
 
 .hentry {
   background-color: #fff;
