@@ -1,0 +1,325 @@
+/*! Made with Bones: http://themble.com/bones :) */
+
+/******************************************************************
+Site Name:  castawaykayak.com
+Author:  Ben Goldman
+
+Stylesheet: Main Stylesheet
+
+Here's where the magic happens. Here, you'll see we are calling in
+the separate media queries. The base mobile goes outside any query
+and is called at the beginning, after that we call the rest
+of the styles inside media queries.
+
+Helpful articles on Sass file organization:
+http://thesassway.com/advanced/modular-css-naming-conventions
+
+******************************************************************/
+
+/*********************
+IMPORTING PARTIALS
+These files are needed at the beginning so that we establish all
+our mixins, functions, and variables that we'll be using across
+the whole project.
+*********************/
+
+// normalize: http://necolas.github.io/normalize.css/
+@import "partials/normalize";
+
+// Sass variables
+@import "partials/variables";
+
+// typography
+@import "partials/typography";
+
+// Sass functions
+@import "partials/functions";
+
+// import mixins
+@import "partials/mixins";
+
+// the grid
+@import "partials/grid";
+
+/*********************
+IMPORTING MODULES
+Modules are reusable blocks or elements we use throughout the project.
+We can break them up as much as we want or just keep them all in one.
+I mean, you can do whatever you want. The world is your oyster. Unless
+you hate oysters, then the world is your peanut butter & jelly sandwich.
+*********************/
+
+// alert boxes
+@import "modules/alerts";
+
+// buttons
+@import "modules/buttons";
+
+// forms (inputs & labels)
+@import "modules/forms";
+
+/*********************
+BASE (MOBILE) SIZE
+This are the mobile styles. It's what people see on their phones. If
+you set a great foundation, you won't need to add too many styles in
+the other stylesheets. Remember, keep it light: Speed is Important.
+*********************/
+
+// styles in base.scss
+@import "breakpoints/base";
+
+/*********************
+LARGER MOBILE DEVICES
+This is for devices like the Galaxy Note or something that's
+larger than an iPhone but smaller than a tablet. Let's call them
+tweeners.
+*********************/
+@media only screen and (min-width: 481px) {
+
+	// styles in 481up.scss
+	@import "breakpoints/481up";
+
+} // end of media query
+
+/*********************
+TABLET & SMALLER LAPTOPS
+This is the average viewing window. So Desktops, Laptops, and
+in general anyone not viewing on a mobile device. Here's where
+you can add resource intensive styles.
+*********************/
+@media only screen and (min-width: 768px) {
+
+	// styles in 768up.scss
+	@import "breakpoints/768up";
+
+} // end of media query
+
+/*********************
+DESKTOP
+This is the average viewing window. So Desktops, Laptops, and
+in general anyone not viewing on a mobile device. Here's where
+you can add resource intensive styles.
+*********************/
+@media only screen and (min-width: 1030px) {
+
+	// styles in 1030up.scss
+	@import "breakpoints/1030up";
+
+} // end of media query
+
+/*********************
+LARGE VIEWING SIZE
+This is for the larger monitors and possibly full screen viewers.
+*********************/
+@media only screen and (min-width: 1240px) {
+
+	// styles in 1240up.scss
+	@import "breakpoints/1240up";
+
+} // end of media query
+
+/*********************
+RETINA (2x RESOLUTION DEVICES)
+This applies to the retina iPhone (4s) and iPad (2,3) along with
+other displays with a 2x resolution. You can also create a media
+query for retina AND a certain size if you want. Go Nuts.
+*********************/
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+       only screen and (min--moz-device-pixel-ratio: 1.5),
+       only screen and (min-device-pixel-ratio: 1.5) {
+
+	// styles in 2x.scss
+	@import "breakpoints/2x";
+
+} // end of media query
+
+/*********************
+PRINT STYLESHEET
+Feel free to customize this. Remember to add things that won't make
+sense to print at the bottom. Things like nav, ads, and forms should
+be set to display none.
+*********************/
+@media print {
+
+	// styles in print.scss
+	@import "partials/print";
+
+}
+/*********************
+Navigation Menu
+This is the css for the mobile navigation
+**********************/
+
+//base styles
+
+.main-navigation {
+	text-align: right;
+}
+.main-navigation a {
+	text-decoration: none;
+	margin: 0 5px;
+	padding: 0 auto;
+	font-size: 1.250rem;
+}
+.main-navigation li {
+	line-height: 1.42857143;
+}
+.main-navigation a:hover,
+.main-navigation a:focus {
+	color: #21759b;
+}
+.main-navigation a:visited {
+	color: #c0c6f2;
+}
+.main-navigation ul.nav,
+.main-navigation div.nav > ul {
+	display: none;
+}
+
+.main-navigation ul.nav.toggled-on,
+.menu-toggle {
+	display: inline-block;
+}
+
+// home page styles
+
+.home .main-navigation li a {
+	color: white;
+	margin: 0 5px;
+	padding: 0 auto;
+	text-align: right;
+	text-decoration: none;
+	font-size: 1.250rem;
+}
+.home .main-navigation li a:hover,
+.home .main-navigation li a:focus,
+.home .main-navigation li a:active,
+.home .main-navigation li a:visited {
+	color: #c0c6f2;
+}
+
+@media screen and (max-width: 599px) {
+	.main-navigation .menu-main-container {
+		background: black;
+		opacity: 0.5;
+		padding: 0.625rem;
+	}
+	.menu-toggle {
+		background: transparent;
+		border: none;
+		color: white;
+		font-size: 1.125rem;
+		margin-top: 0.625rem;
+	}
+	nav .toggled-on li {
+        padding-bottom: 0.625rem;
+	}
+	.box-shadow-menu {
+		position: relative;
+		padding-left: 1.25em;
+	  }
+	  .box-shadow-menu:before {
+		content: "";
+		position: absolute;
+		left: 0;
+		top: 0.25em;
+		width: 1em;
+		height: 0.15em;
+		background: white;
+		box-shadow:  0 0.25em 0 0 white, 0 0.5em 0 0 white;
+	  }
+}
+
+// 600px and up
+
+@media screen and (min-width: 600px) {
+
+.main-navigation {float: right;}
+.main-navigation ul.nav,
+	.main-navigation div.nav > ul {
+			//border-bottom: 1px solid #ededed;
+			//border-top: 1px solid #ededed;
+			display: inline-block !important;
+			width: 100%;
+	}
+	.main-navigation ul {
+			margin: 0;
+			text-indent: 0;
+	}
+	.main-navigation li a,
+	.main-navigation li {
+			display: inline-block;
+			text-decoration: none;
+	}
+	.main-navigation li a {
+			border-bottom: 0;
+			color: #6a6a6a;
+			line-height: 3.692307692;
+			text-transform: uppercase;
+			white-space: nowrap;
+	}
+	.main-navigation li a:hover,
+	.main-navigation li a:focus {
+			color: #000;
+	}
+	.main-navigation li {
+			margin: 0 40px 0 0;
+			margin: 0 2.857142857rem 0 0;
+			position: relative;
+	}
+	.main-navigation li ul {
+			margin: 0;
+			padding: 0;
+			position: absolute;
+			top: 100%;
+			z-index: 1;
+			height: 1px;
+			width: 1px;
+			overflow: hidden;
+			clip: rect(1px, 1px, 1px, 1px);
+	}
+	.main-navigation li ul ul {
+			top: 0;
+			left: 100%;
+	}
+	.main-navigation ul li:hover > ul,
+	.main-navigation ul li:focus > ul,
+	.main-navigation .focus > ul {
+			border-left: 0;
+			clip: inherit;
+			overflow: inherit;
+			height: inherit;
+			width: inherit;
+	}
+	.main-navigation li ul li a {
+			background: #efefef;
+			border-bottom: 1px solid #ededed;
+			display: block;
+			font-size: 11px;
+			font-size: 0.785714286rem;
+			line-height: 2.181818182;
+			padding: 8px 10px;
+			padding: 0.571428571rem 0.714285714rem;
+			width: 180px;
+			width: 12.85714286rem;
+			white-space: normal;
+	}
+	.main-navigation li ul li a:hover,
+	.main-navigation li ul li a:focus {
+			background: #e3e3e3;
+			color: #444;
+	}
+	.main-navigation .current-menu-item > a,
+	.main-navigation .current-menu-ancestor > a,
+	.main-navigation .current_page_item > a,
+	.main-navigation .current_page_ancestor > a {
+			color: #636363;
+			font-weight: bold;
+	}
+	.menu-toggle {
+			display: none;
+	}
+
+	}
+///////////////////////////////////////////////////////
+	
