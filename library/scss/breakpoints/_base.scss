@@ -19,8 +19,8 @@ body {
 	font-family: $lato;
 	font-size: 100%;
 	line-height: 1.5;
-	color: $black;
-	background-color: $light-blue;
+	color: $text-color;
+	background-color: $alert-blue;
   	-webkit-font-smoothing: antialiased;
   	-moz-osx-font-smoothing: grayscale;
 }
@@ -316,10 +316,31 @@ and more scalable.
 */
 
 /********************
+Homepage 
+*********************/
+.intro-copy {
+	width: 96%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.featured-image-home {
+	text-align: center;
+}
+
+.featured-image-home img {
+	width: 100%;
+	height: auto;
+	border: $navy solid 1px;
+}
+
+
+/********************
 Pages
 *********************/
 
 #inner-content {
+	display: flex;
 	background: $gray;
 	padding: 25px;
 	box-shadow: 0 10px 25px 0;
@@ -332,7 +353,7 @@ POSTS & CONTENT STYLES
 #content {
 	margin-top: 3rem;
 	margin-bottom: 3rem;
-	background: $light-blue;
+	background: $alert-blue;
 }
 
 		.hentry {

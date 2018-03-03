@@ -183,6 +183,14 @@ You can't use @extend within media queries
 anymore, so just be aware that if you drop
 them in here, they won't work.
 */
+/********************
+Homepage 
+*********************/
+.intro-copy {
+  width: 76%;
+  margin-left: auto;
+  margin-right: auto; }
+
 /*********************
 NAVIGATION STYLES
 *********************/
@@ -254,6 +262,14 @@ LAYOUT & GRID STYLES
 *********************/
 .wrap {
   width: 760px; }
+
+/*********************
+Home Page
+*********************/
+.intro-copy {
+  width: 66%;
+  margin-left: auto;
+  margin-right: auto; }
 
 /*********************
 HEADER STYLES

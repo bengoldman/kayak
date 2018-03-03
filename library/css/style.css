@@ -1252,8 +1252,8 @@ body {
   font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 100%;
   line-height: 1.5;
-  color: #323944;
-  background-color: #036e86;
+  color: #5c6b80;
+  background-color: #d5edf8;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
@@ -1511,9 +1511,28 @@ and more scalable.
 } // end .nav 
 */
 /********************
+Homepage 
+*********************/
+.intro-copy {
+  width: 96%;
+  margin-left: auto;
+  margin-right: auto; }
+
+.featured-image-home {
+  text-align: center; }
+
+.featured-image-home img {
+  width: 100%;
+  height: auto;
+  border: #092140 solid 1px; }
+
+/********************
 Pages
 *********************/
 #inner-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   background: #eaedf2;
   padding: 25px;
   -webkit-box-shadow: 0 10px 25px 0;
@@ -1525,7 +1544,7 @@ POSTS & CONTENT STYLES
 #content {
   margin-top: 3rem;
   margin-bottom: 3rem;
-  background: #036e86; }
+  background: #d5edf8; }
 
 .hentry {
   background-color: #fff;
@@ -1893,6 +1912,14 @@ tweeners.
   anymore, so just be aware that if you drop
   them in here, they won't work.
   */
+  /********************
+  Homepage 
+  *********************/
+  .intro-copy {
+    width: 76%;
+    margin-left: auto;
+    margin-right: auto; }
+
   /*********************
   NAVIGATION STYLES
   *********************/
@@ -1971,6 +1998,14 @@ you can add resource intensive styles.
   *********************/
   .wrap {
     width: 760px; }
+
+  /*********************
+  Home Page
+  *********************/
+  .intro-copy {
+    width: 66%;
+    margin-left: auto;
+    margin-right: auto; }
 
   /*********************
   HEADER STYLES
