@@ -272,6 +272,12 @@ Home Page
   margin-right: auto; }
 
 /*********************
+BLog
+*********************/
+.blog .entry-tittle {
+  line-height: 5.625em; }
+
+/*********************
 HEADER STYLES
 *********************/
 /*********************
@@ -420,6 +426,19 @@ NAVIGATION STYLES
 
 .menu-toggle {
   display: none; }
+
+/*********************
+Posts
+*********************/
+.big-title {
+  text-align: center;
+  font-size: 3.5rem;
+  font-weight: 700; }
+
+.small-title {
+  text-align: center;
+  font-weight: 400;
+  font-size: 2.2rem; }
 
 /*********************
 SIDEBARS & ASIDES
