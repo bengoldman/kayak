@@ -1542,14 +1542,22 @@ Blog
 *********************/
 #inner-content.blog-wrapper {
   max-width: 1440px;
-  width: 90%; }
+  width: 100%;
+  background: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border: #036a81 solid 3px; }
+
+.blog-main article {
+  -webkit-box-shadow: 5px 8px 15px -2px;
+          box-shadow: 5px 8px 15px -2px; }
 
 .blog .entry-title {
   font-size: 2.5rem;
   margin: 0 auto;
   text-align: center;
   vertical-align: middle;
-  line-height: 65px; }
+  line-height: 3.438rem; }
 
 .byline {
   text-align: center; }
@@ -1558,10 +1566,10 @@ Blog
 Pages
 *********************/
 #inner-content {
-  background: #eaedf2;
+  background: #f8f9fa;
   padding: 25px;
-  -webkit-box-shadow: 0 10px 25px 0;
-          box-shadow: 0 10px 25px 0; }
+  -webkit-box-shadow: 3px 12px 25px -1px;
+          box-shadow: 3px 12px 25px -1px; }
 
 /*********************
 POSTS & CONTENT STYLES
@@ -1575,12 +1583,12 @@ POSTS & CONTENT STYLES
   text-align: center;
   font-size: 2.8rem;
   margin: 0 auto;
-  text-shadow: 2px 2px 2px; }
+  text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4), 0px 8px 13px rgba(0, 0, 0, 0.1), 0px 18px 23px rgba(0, 0, 0, 0.1); }
 
 .small-title {
   text-align: center;
   margin-bottom: 25px;
-  text-shadow: 1px 1px 2px;
+  text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4), 0px 8px 13px rgba(0, 0, 0, 0.1), 0px 18px 23px rgba(0, 0, 0, 0.1);
   color: #036a81; }
 
 .hentry {
@@ -1891,6 +1899,15 @@ COMMENT FORM STYLES
 /*********************
 SIDEBARS & ASIDES
 *********************/
+.sidebar {
+  padding-left: 2%; }
+  .sidebar a {
+    /*&:visited {
+    	color: $blue;
+    }*/ }
+    .sidebar a:link {
+      text-shadow: 1px 1px 1px; }
+
 .widget ul li {
   /* deep nesting */ }
 
@@ -2273,12 +2290,16 @@ you can add resource intensive styles.
   
   Stylesheet: Desktop Stylsheet
   
-  This is the desktop size. It's larger than an iPad so it will only
+  This is the desktop size. It's larger than an iPad so it will only.d-5of7
   be seen on the Desktop.
   
   ******************************************************************/
   .wrap {
-    width: 1040px; } }
+    width: 1040px; }
+
+  #inner-content.blog-wrapper {
+    max-width: 1440px;
+    width: 90%; } }
 /*********************
 LARGE VIEWING SIZE
 This is for the larger monitors and possibly full screen viewers.
@@ -2293,7 +2314,10 @@ This is for the larger monitors and possibly full screen viewers.
   You can add some advanced styles here if you like. This kicks in
   on larger screens.
   
-  ******************************************************************/ }
+  ******************************************************************/
+  #inner-content.blog-wrapper {
+    max-width: 1440px;
+    width: 70%; } }
 /*********************
 RETINA (2x RESOLUTION DEVICES)
 This applies to the retina iPhone (4s) and iPad (2,3) along with
