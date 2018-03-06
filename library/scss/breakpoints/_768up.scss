@@ -165,7 +165,7 @@ NAVIGATION STYLES
 				width: 100%;
 		}
 		.main-navigation ul {
-				margin: 0;
+				margin-right: 40px;
 				text-indent: 0;
 		}
 		.main-navigation li a,
@@ -175,19 +175,25 @@ NAVIGATION STYLES
 		}
 		.main-navigation li a {
 				border-bottom: 0;
-				color: #6a6a6a;
-				line-height: 3.692307692;
+				color: white;
+				font-size: 1.125em;
 				text-transform: uppercase;
 				white-space: nowrap;
+				background: $black;
+				margin-top: 20px;
+				padding: 5px;
+				border: black 1px double;
+				border-radius: 5px;
+
 		}
 		.main-navigation li a:hover,
 		.main-navigation li a:focus {
-				color: $black;
+				color: $banana;
 		}
 		.main-navigation li {
 				margin: 0 40px 0 0;
-				margin: 0 2.857142857rem 0 0;
-				position: relative;
+				margin-right: 15px;
+				position: relative;		
 		}
 		.main-navigation li ul {
 				margin: 0;
@@ -215,7 +221,6 @@ NAVIGATION STYLES
 		}
 		.main-navigation li ul li a {
 				background: #efefef;
-				border-bottom: 1px solid #ededed;
 				display: block;
 				font-size: 11px;
 				font-size: 0.785714286rem;
@@ -235,13 +240,11 @@ NAVIGATION STYLES
 		.main-navigation .current-menu-ancestor > a,
 		.main-navigation .current_page_item > a,
 		.main-navigation .current_page_ancestor > a {
-				color: #636363;
-				font-weight: bold;
+				color: $white;
 		}
 		.menu-toggle {
 				display: none;
 		}
-
 
 /*********************
 Posts

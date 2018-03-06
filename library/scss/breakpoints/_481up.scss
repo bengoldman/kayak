@@ -123,3 +123,30 @@ do they need tweaking?
 	}
 } /* end .footer-links */
 
+//Unique nav footer styles
+
+#menu-footer {
+	flex-direction: row;
+
+	li.menu-item {
+		padding-right: 2.500rem;
+	}
+	li {
+		&:last-child a {
+			padding-right: 0rem;
+		}
+	}
+	a {
+	border-bottom: 0;
+	color: white;
+	text-transform: uppercase;
+	white-space: nowrap;
+	background: $black;
+	padding: 5px;
+	text-decoration: none;
+
+		&:hover {
+		text-decoration: underline;
+		}
+	}
+}

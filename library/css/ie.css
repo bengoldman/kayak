@@ -241,6 +241,23 @@ check your menus here. do they look good?
 do they need tweaking?
 */
 /* end .footer-links */
+#menu-footer {
+  flex-direction: row; }
+  #menu-footer li.menu-item {
+    padding-right: 2.500rem; }
+  #menu-footer li:last-child a {
+    padding-right: 0rem; }
+  #menu-footer a {
+    border-bottom: 0;
+    color: white;
+    text-transform: uppercase;
+    white-space: nowrap;
+    background: #323944;
+    padding: 5px;
+    text-decoration: none; }
+    #menu-footer a:hover {
+      text-decoration: underline; }
+
 /******************************************************************
 Site Name:
 Author:
@@ -351,7 +368,7 @@ NAVIGATION STYLES
   width: 100%; }
 
 .main-navigation ul {
-  margin: 0;
+  margin-right: 40px;
   text-indent: 0; }
 
 .main-navigation li a,
@@ -361,18 +378,23 @@ NAVIGATION STYLES
 
 .main-navigation li a {
   border-bottom: 0;
-  color: #6a6a6a;
-  line-height: 3.692307692;
+  color: white;
+  font-size: 1.125em;
   text-transform: uppercase;
-  white-space: nowrap; }
+  white-space: nowrap;
+  background: #323944;
+  margin-top: 20px;
+  padding: 5px;
+  border: black 1px double;
+  border-radius: 5px; }
 
 .main-navigation li a:hover,
 .main-navigation li a:focus {
-  color: #323944; }
+  color: #F2C777; }
 
 .main-navigation li {
   margin: 0 40px 0 0;
-  margin: 0 2.857142857rem 0 0;
+  margin-right: 15px;
   position: relative; }
 
 .main-navigation li ul {
@@ -401,7 +423,6 @@ NAVIGATION STYLES
 
 .main-navigation li ul li a {
   background: #efefef;
-  border-bottom: 1px solid #ededed;
   display: block;
   font-size: 11px;
   font-size: 0.785714286rem;
@@ -421,8 +442,7 @@ NAVIGATION STYLES
 .main-navigation .current-menu-ancestor > a,
 .main-navigation .current_page_item > a,
 .main-navigation .current_page_ancestor > a {
-  color: #636363;
-  font-weight: bold; }
+  color: #fff; }
 
 .menu-toggle {
   display: none; }

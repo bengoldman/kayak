@@ -1253,7 +1253,7 @@ body {
   font-size: 100%;
   line-height: 1.5;
   color: #5c6b80;
-  background: #d5edf8 url("http://localhost:8888/kayak/wp-content/uploads/2018/04/grilled-noise.png") repeat;
+  background: #d5edf8;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
@@ -1362,6 +1362,14 @@ h5, .h5 {
 /*********************
 HEADER STYLES
 *********************/
+.home .parallax, .blog .parallax {
+  background-image: url("http://localhost:8888/kayak/wp-content/uploads/2018/04/grilled-noise.png");
+  height: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
 .home .header {
   background-image: url("http://localhost:8888/kayak/wp-content/uploads/2018/02/pexels-photo-696039.jpeg");
   background-size: cover;
@@ -1372,7 +1380,7 @@ HEADER STYLES
       height: 600px; } }
 
 .blog header.header {
-  background-image: url("http://localhost:8888/kayak/wp-content/uploads/2018/03/pexels-photo-461595.jpeg");
+  background-image: url("http://localhost:8888/kayak/wp-content/uploads/2018/02/pexels-photo-461595.jpeg");
   background-size: cover;
   height: 400px;
   border: #0c3f81 solid 0.125rem; }
@@ -1389,17 +1397,22 @@ HEADER STYLES
 NAVIGATION STYLES
 **********************/
 .main-navigation {
-  text-align: right; }
+  text-align: center; }
 
 .main-navigation a {
   text-decoration: none;
   margin: 0 5px;
   padding: 0 auto;
-  font-size: 1.250rem;
-  font-weight: bolder; }
+  font-size: 1.250rem; }
 
 .main-navigation li {
   line-height: 1.42857143; }
+
+.main-navigation li a {
+  color: white;
+  margin: 0 5px;
+  padding: 0 auto;
+  text-decoration: none; }
 
 .main-navigation a:hover {
   color: #F2C777; }
@@ -1422,7 +1435,7 @@ NAVIGATION STYLES
     background: transparent;
     border: none;
     color: #fff;
-    font-size: 1.125rem;
+    font-size: 1.250rem;
     margin-top: 0.625rem; }
 
   nav .toggled-on li {
@@ -1442,6 +1455,33 @@ NAVIGATION STYLES
     background: #fff;
     -webkit-box-shadow: 0 0.25em 0 0 #fff, 0 0.5em 0 0 #fff;
             box-shadow: 0 0.25em 0 0 #fff, 0 0.5em 0 0 #fff; } }
+#menu-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+  #menu-footer li.menu-item {
+    margin-bottom: 1.250rem; }
+  #menu-footer a {
+    border-bottom: 0;
+    color: white;
+    text-transform: uppercase;
+    white-space: nowrap;
+    background: #323944;
+    padding: 5px;
+    text-decoration: none; }
+    #menu-footer a:hover {
+      text-decoration: underline; }
+
 /*
 //all navs have a .nav class applied via
 //the wp_menu function; this is so we can
@@ -1546,7 +1586,7 @@ Blog
   background: none;
   -webkit-box-shadow: none;
           box-shadow: none;
-  border: #036a81 solid 3px; }
+  border: #036a81 solid 1px; }
 
 .blog-main article {
   -webkit-box-shadow: 5px 8px 15px -2px;
@@ -1569,6 +1609,10 @@ Blog
 
 .blog .byline {
   text-align: center; }
+
+.hentry {
+  -webkit-box-shadow: 3px 12px 25px -1px;
+          box-shadow: 3px 12px 25px -1px; }
 
 /********************
 Pages
@@ -1934,6 +1978,13 @@ FOOTER STYLES
   background-color: #323944;
   color: #f8f9fa; }
 
+.copyright, .rightbrain {
+  text-align: center; }
+  .copyright span a:link, .copyright span a:visited, .rightbrain span a:link, .rightbrain span a:visited {
+    color: #F2C777; }
+  .copyright span a:hover, .rightbrain span a:hover {
+    color: #fff; }
+
 /*
 if you checked out the link above:
 http://www.alistapart.com/articles/organizing-mobile/
@@ -2030,7 +2081,26 @@ tweeners.
   check your menus here. do they look good?
   do they need tweaking?
   */
-  /* end .footer-links */ }
+  /* end .footer-links */
+  #menu-footer {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row; }
+    #menu-footer li.menu-item {
+      padding-right: 2.500rem; }
+    #menu-footer li:last-child a {
+      padding-right: 0rem; }
+    #menu-footer a {
+      border-bottom: 0;
+      color: white;
+      text-transform: uppercase;
+      white-space: nowrap;
+      background: #323944;
+      padding: 5px;
+      text-decoration: none; }
+      #menu-footer a:hover {
+        text-decoration: underline; } }
 /*********************
 TABLET & SMALLER LAPTOPS
 This is the average viewing window. So Desktops, Laptops, and
@@ -2148,7 +2218,7 @@ you can add resource intensive styles.
     width: 100%; }
 
   .main-navigation ul {
-    margin: 0;
+    margin-right: 40px;
     text-indent: 0; }
 
   .main-navigation li a,
@@ -2158,18 +2228,23 @@ you can add resource intensive styles.
 
   .main-navigation li a {
     border-bottom: 0;
-    color: #6a6a6a;
-    line-height: 3.692307692;
+    color: white;
+    font-size: 1.125em;
     text-transform: uppercase;
-    white-space: nowrap; }
+    white-space: nowrap;
+    background: #323944;
+    margin-top: 20px;
+    padding: 5px;
+    border: black 1px double;
+    border-radius: 5px; }
 
   .main-navigation li a:hover,
   .main-navigation li a:focus {
-    color: #323944; }
+    color: #F2C777; }
 
   .main-navigation li {
     margin: 0 40px 0 0;
-    margin: 0 2.857142857rem 0 0;
+    margin-right: 15px;
     position: relative; }
 
   .main-navigation li ul {
@@ -2198,7 +2273,6 @@ you can add resource intensive styles.
 
   .main-navigation li ul li a {
     background: #efefef;
-    border-bottom: 1px solid #ededed;
     display: block;
     font-size: 11px;
     font-size: 0.785714286rem;
@@ -2218,8 +2292,7 @@ you can add resource intensive styles.
   .main-navigation .current-menu-ancestor > a,
   .main-navigation .current_page_item > a,
   .main-navigation .current_page_ancestor > a {
-    color: #636363;
-    font-weight: bold; }
+    color: #fff; }
 
   .menu-toggle {
     display: none; }
@@ -2440,17 +2513,3 @@ be set to display none.
   .respond-form,
   nav {
     display: none; } }
-/*********************
-Navigation Menu
-This is the css for the mobile navigation
-**********************/
-.home .main-navigation li a {
-  color: white;
-  margin: 0 5px;
-  padding: 0 auto;
-  text-align: right;
-  text-decoration: none;
-  font-size: 1.250rem; }
-
-.home .main-navigation li a:hover {
-  color: #F2C777; }

@@ -145,28 +145,3 @@ be set to display none.
 	@import "partials/print";
 
 }
-/*********************
-Navigation Menu
-This is the css for the mobile navigation
-**********************/
-
-
-// home page styles
-
-.home .main-navigation li a {
-	color: white;
-	margin: 0 5px;
-	padding: 0 auto;
-	text-align: right;
-	text-decoration: none;
-	font-size: 1.250rem;
-}
-.home .main-navigation li a:hover {
-	color: $banana; 
-}
-
-
-
-
-
-	
