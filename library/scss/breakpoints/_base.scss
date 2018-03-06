@@ -20,7 +20,7 @@ body {
 	font-size: 100%;
 	line-height: 1.5;
 	color: $text-color;
-	background-color: $alert-blue;
+	background: $alert-blue url("http://localhost:8888/kayak/wp-content/uploads/2018/04/grilled-noise.png") repeat;
   	-webkit-font-smoothing: antialiased;
   	-moz-osx-font-smoothing: grayscale;
 }
@@ -85,7 +85,7 @@ a, a:visited {
 
 	/* on hover */
 	&:hover, &:focus {
-		color: $blue;
+		color: $ocean-lite;
 	}
 
 	/* on click */
@@ -357,6 +357,18 @@ Blog
 
 .blog-main article {
 	box-shadow: 5px 8px 15px -2px;
+	border-color: $alert-blue;
+}
+
+.blog-main a {
+
+	&:link {
+		text-decoration: none;
+	}
+	&:hover {
+		article {background-color: $alert-blue;}
+		h1.h1  {color: $ocean-lite;}
+	}
 }
 
 .blog .entry-title {
@@ -367,7 +379,7 @@ Blog
 	line-height: 3.438rem;
 }
 
-.byline {
+.blog .byline {
 	text-align: center;
 }
 /********************
@@ -387,7 +399,6 @@ POSTS & CONTENT STYLES
 #content {
 	margin-top: 3rem;
 	margin-bottom: 3rem;
-	background: $alert-blue;
 }
 		.big-title {
 			text-align: center;
