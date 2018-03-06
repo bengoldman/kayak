@@ -44,7 +44,7 @@
 
 		<div id="container">
 
-			<header class="header" role="banner" itemscope itemtype="http://schema.org/WPHeader">
+			<header class="header parallax" role="banner" itemscope itemtype="http://schema.org/WPHeader">
 			
 			<!-- //Mobile responsive nav -->
 				<nav id="site-navigation" class="main-navigation" role="navigation">

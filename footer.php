@@ -19,6 +19,7 @@
 					</nav>
 
 					<p class="source-org copyright">&copy; <?php echo date('Y'); ?> <?php bloginfo( 'name' ); ?></p>
+					<p class="rightbrain">Powered by <span><a href="http://rightbrainmedia.com/" target="_blank">RiGHT BRAiN MEDiA</a></span></p>
 
 				</div>
 

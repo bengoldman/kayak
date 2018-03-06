@@ -6,7 +6,7 @@
                 <h1 class="big-title">Castaway Blog</h1>
                 <h2 class="h2 small-title">Notes from the Deep!</h2>
 
-				<div id="inner-content" class="blog-wrapper wrap cf">
+				<div id="inner-content" class="blog-wrapper wrap parallax cf">
 						<main id="main" class="blog-main m-all t-2of3 d-5of7 cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 
 							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
